@@ -1,46 +1,39 @@
-import { Component } from '@angular/core';
+  
+import { Component, inject } from '@angular/core';
 import { ProductCardComponent } from '../product-card/product-card.component';
 import { CommonModule } from '@angular/common';
+import { SearchComponent } from '../search/search.component';
+import { ProductService } from '../../product.service';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [ProductCardComponent,CommonModule],
+  imports: [ProductCardComponent,CommonModule,SearchComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
 export class HomeComponent {
-   products = [
-    {
-      id: 1,
-      brand: 'Apple',
-      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZygosKSxjeH8_EoMSIiZB4wJz3V4rKoiXkg&s',
-      currentPrice: 999,
-      standardPrice: 1299,
-      discount: 23,
-      name: 'iPhone 13'
-    },
-    {
-      id: 2,
-      brand: 'Samsung',
-      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZygosKSxjeH8_EoMSIiZB4wJz3V4rKoiXkg&s',
-      currentPrice: 799,
-      standardPrice: 999,
-      discount: 20,
-      name: 'Samsung Galaxy'
-    },
-    {
-      id: 3,
-      brand: 'Google',
-      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZygosKSxjeH8_EoMSIiZB4wJz3V4rKoiXkg&s',
-      currentPrice: 599,
-      standardPrice: 699,
-      discount: 14,
-      name: 'Google Pixel 6'
-    }
-  ];
+  products:any[]=[];
+  filteredProduct:any[]=[];
+  productService=inject(ProductService)
+  ngOnInit(){
+this.productService.getProducts().subscribe((result)=>{
+  console.log(result)
+  this.products=result as any[];
+  this.filteredProduct=this.products;
+})
+    
+
+  }
   onViewProduct(event:any){
     console.log("view call ",event)
   }
-
+onsearch(search:string){
+console.log("home",search)
+if(search){
+  this.filteredProduct=this.products.filter(x=>x.name.toLowerCase().includes(search.toLowerCase()))
+}else{
+  this.filteredProduct=this.products;
+}
+}
 }

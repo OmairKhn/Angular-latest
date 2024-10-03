@@ -1,1 +1,12 @@
-<p>search works!</p>
+<div class="mb-3 d-flex">
+    <input
+      type="text"
+      class="form-control"
+      placeholder="Search for products..."
+     (keypress)="onTyping($event)"
+     (change)="inputChange($event)"
+    />
+    <button class="ms-2" (click)="onsearch()">Search</button>
+
+  </div>
+  
