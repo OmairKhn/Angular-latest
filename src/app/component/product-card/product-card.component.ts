@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Product } from '../../types/product';
 
 @Component({
   selector: 'app-product-card',
@@ -9,8 +10,8 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
   styleUrl: './product-card.component.css'
 })
 export class ProductCardComponent {
-@Input() product:any;
-@Output() viewProduct=new EventEmitter<string>();
+@Input() product!:Product;
+@Output() viewProduct=new EventEmitter<Number>();
 
 view(){
   console.log("view")
