@@ -1,0 +1,96 @@
+/* Card Container Styling */
+.product-card {
+    width: 70%;
+    margin: 20px auto; /* Center the card horizontally */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+    border-radius: 10px; /* Rounded corners for a smooth look */
+    overflow: hidden;
+    transition: all 0.3s ease; /* Smooth hover animation */
+  }
+  
+  /* Card hover effect */
+  .product-card:hover {
+    transform: translateY(-5px); /* Slight lift on hover */
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15); /* Deeper shadow on hover */
+  }
+  
+  /* Image Styling */
+  .product-image {
+    height: 250px; /* Set a fixed height */
+    object-fit: contain; /* Ensure image fills area */
+    border-bottom: 1px solid #ddd; /* Separate image from card body */
+  }
+  
+  /* Product title (name) styling */
+  .card-title {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  /* Product brand styling */
+  .card-text {
+    color: #888;
+    margin-bottom: 20px;
+  }
+  
+  /* Price and discount area */
+  .price-section {
+    font-size: 1.2rem;
+  }
+  
+  /* Current price */
+  .text-success {
+    font-size: 1.5rem;
+  }
+  
+  /* Standard price (with strikethrough) */
+  .text-danger s {
+    font-size: 1.2rem;
+    color: #b5b5b5;
+  }
+  
+  /* Discount badge */
+  .badge {
+    font-size: 0.95rem;
+  }
+  
+  /* Button styling */
+  .btn-primary {
+    font-size: 1rem;
+    padding: 0.5rem 1.5rem;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-primary:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Responsive design */
+  @media (max-width: 768px) {
+    .product-card {
+      width: 100%; /* Make the card full-width on small screens */
+    }
+  
+    .product-image {
+      height: 250px; /* Adjust image size for mobile */
+    }
+  
+    .card-title {
+      font-size: 1.4rem; /* Adjust title size */
+    }
+  
+    .price-section {
+      font-size: 1rem; /* Adjust price font size */
+    }
+  
+    .text-success {
+      font-size: 1.3rem;
+    }
+  
+    .text-danger s {
+      font-size: 1rem;
+    }
+  }
+  

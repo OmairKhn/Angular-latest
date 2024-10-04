@@ -5,6 +5,7 @@ import { CommonModule } from '@angular/common';
 import { SearchComponent } from '../search/search.component';
 import { ProductService } from '../../product.service';
 import { Product } from '../../types/product';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -17,6 +18,7 @@ export class HomeComponent {
   products:Product[]=[];
   filteredProduct:Product[]=[];
   productService=inject(ProductService)
+  router=inject(Router)
   ngOnInit(){
 this.productService.getProducts().subscribe((result)=>{
   console.log(result)
@@ -28,6 +30,7 @@ this.productService.getProducts().subscribe((result)=>{
   }
   onViewProduct(event:any){
     console.log("view call ",event)
+    this.router.navigateByUrl("/product/"+event);
   }
 onsearch(search:string){
 console.log("home",search)
