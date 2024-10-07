@@ -1,0 +1,92 @@
+<div class="container mt-4">
+  <h3>Add a New Card</h3>
+  <form (ngSubmit)="addProduct()">
+    <div class="mb-3">
+      <label for="name" class="form-label">Card Name</label>
+      <input
+        name="name"
+        type="text"
+        class="form-control"
+        [(ngModel)]="product.name"
+        placeholder="Enter card name"
+      />
+      <div class="text-danger">Card name is required.</div>
+    </div>
+
+    <div class="mb-3">
+      <label for="brand" class="form-label">Brand</label>
+      <input
+        name="brand"
+        type="text"
+        class="form-control"
+        [(ngModel)]="product.brand"
+        placeholder="Enter brand"
+      />
+      <div class="text-danger">Brand is required.</div>
+    </div>
+  
+
+    <div class="mb-3">
+      <label for="price" class="form-label">standardPrice</label>
+      <input
+        name="standardPrice"
+        type="number"
+        class="form-control"
+        [(ngModel)]="product.standardPrice"
+        (ngModelChange)="updateDiscount()"
+        placeholder="Enter standardPrice "
+      />
+      <div class="text-danger">Enter a valid price.</div>
+    </div>
+    <div class="mb-3">
+        <label for="price" class="form-label">currentPrice</label>
+        <input
+          name="currentPrice"
+          type="number"
+          class="form-control"
+          [(ngModel)]="product.currentPrice"
+          (ngModelChange)="updateDiscount()"
+          placeholder="Enter price"
+        />
+        <div class="text-danger">Enter a valid price.</div>
+      </div>
+
+    <div class="mb-3">
+      <label for="discount" class="form-label">Discount (%)</label>
+      <input
+      name="discount"
+      type="number"
+      class="form-control"
+      [(ngModel)]="product.discount"
+      (ngModelChange)="updateDiscount()"
+      placeholder="Discount will be calculated automatically"
+      readonly  >
+    />
+      <div class="text-danger">Enter a valid discount between 0 and 100.</div>
+    </div>
+
+    <div class="mb-3">
+      <label for="imageUrl" class="form-label">Image URL</label>
+      <input
+        name="image"
+        type="url"
+        class="form-control"
+        [(ngModel)]="product.image"
+        placeholder="Enter image URL"
+      />
+      <div
+       
+        class="text-danger"
+      >
+        Enter a valid image URL (jpg, png, gif).
+      </div>
+    </div>
+
+    <button type="submit" class="btn btn-primary">
+      Submit
+    </button>
+    <!-- <button type="button" class="btn btn-secondary ms-2" (click)="onReset()">
+      Reset
+    </button> -->
+  </form>
+</div>

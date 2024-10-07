@@ -1,0 +1,78 @@
+<div class="container mt-4">
+    <h3>Edit Product</h3>
+    <form [formGroup]="productForm" (ngSubmit)="editProduct()">
+        <div class="mb-3">
+            <label for="name" class="form-label">Card Name</label>
+            <input
+                formControlName="name"
+                type="text"
+                class="form-control"
+                placeholder="Enter card name"
+            />
+            <div class="text-danger" *ngIf="productForm.controls['name'].invalid && productForm.controls['name'].touched">Card name is required.</div>
+        </div>
+
+        <div class="mb-3">
+            <label for="brand" class="form-label">Brand</label>
+            <input
+                formControlName="brand"
+                type="text"
+                class="form-control"
+                placeholder="Enter brand"
+            />
+            <div class="text-danger" *ngIf="productForm.controls['brand'].invalid && productForm.controls['brand'].touched">Brand is required.</div>
+        </div>
+
+        <div class="mb-3">
+            <label for="standardPrice" class="form-label">Standard Price</label>
+            <input
+                formControlName="standardPrice"
+                (ngModelChange)="updateDiscount()"
+
+                type="number"
+                class="form-control"
+                placeholder="Enter standard price"
+            />
+            <div class="text-danger" *ngIf="productForm.controls['standardPrice'].invalid && productForm.controls['standardPrice'].touched">Standard price is required.</div>
+        </div>
+
+        <div class="mb-3">
+            <label for="currentPrice" class="form-label">Current Price</label>
+            <input
+                formControlName="currentPrice"
+                (ngModelChange)="updateDiscount()"
+
+                type="number"
+                class="form-control"
+                placeholder="Enter current price"
+            />
+            <div class="text-danger" *ngIf="productForm.controls['currentPrice'].invalid && productForm.controls['currentPrice'].touched">Current price is required.</div>
+        </div>
+
+        <div class="mb-3">
+            <label for="discount" class="form-label">Discount (%)</label>
+            <input
+                formControlName="discount"
+                (ngModelChange)="updateDiscount()"
+
+                type="number"
+                class="form-control"
+                placeholder="Enter discount"
+            />
+            <div class="text-danger" *ngIf="productForm.controls['discount'].invalid && productForm.controls['discount'].touched">Discount is required.</div>
+        </div>
+
+        <div class="mb-3">
+            <label for="image" class="form-label">Image URL</label>
+            <input
+                formControlName="image"
+                type="url"
+                class="form-control"
+                placeholder="Enter image URL"
+            />
+            <div class="text-danger" *ngIf="productForm.controls['image'].invalid && productForm.controls['image'].touched">Image URL is required.</div>
+        </div>
+
+        <button type="submit" class="btn btn-primary" [disabled]="productForm.invalid">Edit</button>
+    </form>
+</div>

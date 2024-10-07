@@ -40,4 +40,7 @@ if(search){
   this.filteredProduct=this.products;
 }
 }
+onReset() {
+  this.filteredProduct = this.products;
+}
 }

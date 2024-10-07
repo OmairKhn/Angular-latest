@@ -1,5 +1,5 @@
 <div class="container mt-2">
-  <app-search (search)="onsearch($event)"></app-search>
+  <app-search (search)="onsearch($event)" (reset)="onReset()"></app-search>
     <div class="row">
       @for (item of filteredProduct;track $index){ 
         <div class="col-md-4">

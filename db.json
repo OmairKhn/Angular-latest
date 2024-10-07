@@ -1,7 +1,16 @@
 {
-"products":[
+  "products": [
     {
       "id": "1",
+      "name": "iPhone 12",
+      "brand": "asd",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZygosKSxjeH8_EoMSIiZB4wJz3V4rKoiXkg&s",
+      "currentPrice": 0,
+      "standardPrice": "1299",
+      "discount": "23"
+    },
+    {
+      "id": "2",
       "brand": "Apple",
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZygosKSxjeH8_EoMSIiZB4wJz3V4rKoiXkg&s",
       "currentPrice": "999",
@@ -10,43 +19,103 @@
       "name": "iPhone 13"
     },
     {
-        "id": "2",
-        "brand": "Apple",
-        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZygosKSxjeH8_EoMSIiZB4wJz3V4rKoiXkg&s",
-        "currentPrice": "999",
-        "standardPrice": "1299",
-        "discount": "23",
-        "name": "iPhone 13"
-      },
-      {
-        "id": "3",
-        "brand": "Apple",
-        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZygosKSxjeH8_EoMSIiZB4wJz3V4rKoiXkg&s",
-        "currentPrice": "999",
-        "standardPrice": "1299",
-        "discount": "23",
-        "name": "iPhone 13"
-      },
-      {
-        "id": "4",
-        "brand": "Apple",
-        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZygosKSxjeH8_EoMSIiZB4wJz3V4rKoiXkg&s",
-        "currentPrice": "999",
-        "standardPrice": "1299",
-        "discount": "23",
-        "name": "iPhone 13"
-      },
-      {
-        "id": "5",
-        "brand": "Apple",
-        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZygosKSxjeH8_EoMSIiZB4wJz3V4rKoiXkg&s",
-        "currentPrice": "999",
-        "standardPrice": "1299",
-        "discount": "23",
-        "name": "iPhone 13"
-      }
-  
-  
+      "id": "3",
+      "name": "iPhone 13",
+      "brand": "",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZygosKSxjeH8_EoMSIiZB4wJz3V4rKoiXkg&s",
+      "currentPrice": "999",
+      "standardPrice": "1299",
+      "discount": "23"
+    },
+    {
+      "id": "4",
+      "brand": "Apple",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZygosKSxjeH8_EoMSIiZB4wJz3V4rKoiXkg&s",
+      "currentPrice": "999",
+      "standardPrice": "1299",
+      "discount": "23",
+      "name": "iPhone 13"
+    },
+    {
+      "id": "5",
+      "brand": "samsung",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZygosKSxjeH8_EoMSIiZB4wJz3V4rKoiXkg&s",
+      "currentPrice": "999",
+      "standardPrice": "1299",
+      "discount": "23",
+      "name": "iPhone 13"
+    },
+    {
+      "id": "6",
+      "brand": "samsung",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZygosKSxjeH8_EoMSIiZB4wJz3V4rKoiXkg&s",
+      "currentPrice": "999",
+      "standardPrice": "1299",
+      "discount": "23",
+      "name": "samsung"
+    },
+    {
+      "id": "7",
+      "brand": "samsung",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZygosKSxjeH8_EoMSIiZB4wJz3V4rKoiXkg&s",
+      "currentPrice": "999",
+      "standardPrice": "1299",
+      "discount": "23",
+      "name": "samsung"
+    },
+    {
+      "id": "5dc4",
+      "name": "huawe mate 10",
+      "brand": "huawe",
+      "image": "https://th.bing.com/th/id/OIP.a7Gu3LGvWk8JNOh7CS7yzwHaFX?w=4176&h=3030&rs=1&pid=ImgDetMain",
+      "currentPrice": 90000,
+      "standardPrice": 10000,
+      "discount": 10
+    },
+    {
+      "id": "c021",
+      "name": "Polo Republica Men's Paper Clips Embroidered Polo Shirt",
+      "brand": "polo",
+      "image": "https://www.elo.shopping/cdn/shop/files/265_e911b5df-cf1e-4132-bbe1-9a42744a47bd.jpg?v=1727981390&width=360",
+      "currentPrice": 1500,
+      "standardPrice": 2000,
+      "discount": 20
+    },
+    {
+      "id": "adad",
+      "name": "Polo Republica Men's Paper Clips Embroidered Polo Shirt",
+      "brand": "polo",
+      "image": "https://www.elo.shopping/cdn/shop/files/265_e911b5df-cf1e-4132-bbe1-9a42744a47bd.jpg?v=1727981390&width=360",
+      "currentPrice": 90,
+      "standardPrice": 100,
+      "discount": 0
+    },
+    {
+      "id": "399f",
+      "name": "Polo Republica Men's Paper Clips Embroidered Polo Shirt",
+      "brand": "polo",
+      "image": "https://www.elo.shopping/cdn/shop/files/265_e911b5df-cf1e-4132-bbe1-9a42744a47bd.jpg?v=1727981390&width=360",
+      "currentPrice": 90,
+      "standardPrice": 100,
+      "discount": 0
+    },
+    {
+      "id": "c6b5",
+      "name": "Polo Republica Men's Paper Clips Embroidered Polo Shirt",
+      "brand": "polo",
+      "image": "https://www.elo.shopping/cdn/shop/files/265_e911b5df-cf1e-4132-bbe1-9a42744a47bd.jpg?v=1727981390&width=360",
+      "currentPrice": 100,
+      "standardPrice": 110,
+      "discount": 0
+    },
+    {
+      "id": "58ce",
+      "name": "Polo Republica Men's Paper Clips Embroidered Polo Shirt",
+      "brand": "polo",
+      "image": "https://www.elo.shopping/cdn/shop/files/265_e911b5df-cf1e-4132-bbe1-9a42744a47bd.jpg?v=1727981390&width=360",
+      "currentPrice": 90,
+      "standardPrice": 100,
+      "discount": 10
+    }
   ]
-
 }

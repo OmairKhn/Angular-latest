@@ -3,10 +3,13 @@
       type="text"
       class="form-control"
       placeholder="Search for products..."
-     (keypress)="onTyping($event)"
-     (change)="inputChange($event)"
+      name="search"
+      [(ngModel)]="text"
+     
     />
     <button class="ms-2" (click)="onsearch()">Search</button>
+    <button class="ms-2" (click)="onReset()">Reset</button>
+    <button class="ms-2" routerLink="/add-product" >Add</button>
 
   </div>
   

@@ -1,5 +1,5 @@
 export interface Product{
-    id: number,
+    id?: number,
     brand: String,
     image: String,
     currentPrice: Number,

@@ -1,0 +1,25 @@
+.card {
+    
+    width: 18rem;
+    height: 25rem; /* Fixed height for the card */
+    overflow: hidden; /* Prevent overflowing content */
+  }
+  
+  .card-image {
+    height: 250px; /* Set a fixed height for the image */
+    object-fit: cover; /* Ensures the image covers the space without stretching */
+  }
+  
+  .card-title,
+  .card-text {
+    white-space: nowrap; /* Prevent text wrapping */
+    overflow: hidden; /* Hide overflow content */
+    text-overflow: ellipsis; /* Add an ellipsis (...) for long text */
+  }
+  
+  .card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
