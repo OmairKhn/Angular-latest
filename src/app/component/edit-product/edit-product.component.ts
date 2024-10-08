@@ -24,7 +24,7 @@ export class EditProductComponent {
     image: ['', Validators.required],
     currentPrice: ['', [Validators.required, Validators.min(1)]],
     standardPrice: ['', [Validators.required, Validators.min(1)]],
-    discount: [{ value: 0, disabled: true }, [Validators.min(0), Validators.max(100)]] // Set discount disabled
+    discount: ['', [Validators.min(0), Validators.max(100)]] // Set discount disabled
   });
 
   ngOnInit() {
