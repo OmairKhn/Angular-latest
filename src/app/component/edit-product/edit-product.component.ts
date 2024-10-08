@@ -27,6 +27,7 @@ export class EditProductComponent {
     discount: ['', [Validators.min(0), Validators.max(100)]] // Set discount disabled
   });
 
+  
   ngOnInit() {
     const productId = this.activatedRoute.snapshot.params['id'];
     this.productService.getProductByid(productId).subscribe(result => {
