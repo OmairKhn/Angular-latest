@@ -3,6 +3,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { Product } from '../../types/product';
 import { ProductService } from '../../product.service';
 import { Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-add-product',
@@ -22,6 +23,8 @@ product:Product={
 }
 producService=inject(ProductService);
 router=inject(Router);
+toasterService=inject(ToastrService);
+
 updateDiscount() {
   const currentPrice = Number(this.product.currentPrice); // Ensure it is a number
   const standardPrice = Number(this.product.standardPrice); 
@@ -39,7 +42,7 @@ updateDiscount() {
 addProduct(){
 console.log("form submitted",this.product)
 this.producService.addProducts(this.product).subscribe(result=>{
-  alert("product saved")
+  this.toasterService.success("product saved")
   this.router.navigateByUrl("/")
 })
 }

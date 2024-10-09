@@ -3,11 +3,11 @@ import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angula
 import { RouterModule, ActivatedRoute, Router } from '@angular/router';
 import { ProductService } from '../../product.service';
 import { CommonModule } from '@angular/common';
-
+import { ToastrService } from 'ngx-toastr';
 @Component({
   selector: 'app-edit-product',
   standalone: true,
-  imports: [RouterModule, ReactiveFormsModule, CommonModule],
+  imports: [RouterModule, ReactiveFormsModule, CommonModule,],
   templateUrl: './edit-product.component.html',
   styleUrls: ['./edit-product.component.css']
 })
@@ -16,6 +16,7 @@ export class EditProductComponent {
   productService = inject(ProductService);
   activatedRoute = inject(ActivatedRoute);
   router = inject(Router);
+ toasterService=inject(ToastrService);
   
   productForm: FormGroup = this.formBuilder.group({
     id: [''],
@@ -27,7 +28,7 @@ export class EditProductComponent {
     discount: ['', [Validators.min(0), Validators.max(100)]] // Set discount disabled
   });
 
-  
+
   ngOnInit() {
     const productId = this.activatedRoute.snapshot.params['id'];
     this.productService.getProductByid(productId).subscribe(result => {
@@ -43,12 +44,12 @@ export class EditProductComponent {
 
   editProduct() {
     if (this.productForm.invalid) {
-      alert("Please provide all the fields.");
+      this.toasterService.error("Please provide all the fields.");
       return;
     }
 
     this.productService.updateProduct(this.productForm.value).subscribe(result => {
-      alert("Product updated successfully.");
+      this.toasterService.success("Product updated successfully.");
       this.router.navigateByUrl("/");
     });
   }
